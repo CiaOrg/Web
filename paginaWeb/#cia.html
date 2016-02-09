@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>#C.I.A</title>
+  <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon"/>
+  <link rel="stylesheet" href="../STYLE/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../STYLE/cia.css">
+  <!-- JavaScript Includes -->
+  <script src="../STYLE/JS/vendor/jquery.min.js"></script>
+  <script src="../STYLE/JS/transition.js"></script>
+  <script src="../STYLE/JS/modal.js"></script>
+  <script src="../STYLE/JS/tooltip.js"></script>
+  <script src="../STYLE/JS/popover.js"></script>
+  <script src="../STYLE/JS/collapse.js"></script>
+  <script src="../STYLE/cia.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="menu-top">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <p class="titulo-cia">Smart Home Automated - Casa Inteligente Automatizada - C.I.A</p>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#about"><img src="../img/face.png" height="32px" width="32px"></a></li>
+        <li><a href="#contact"><img src="../img/twitter.png" height="32px" width="32px"></a></li>
+        <li><a href="#contact"><img src="../img/g+.png" height="32px" width="32px"></a></li>
+        <li><a href="#contact"><img src="../img/youtube.png" height="32px" width="32px"></a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+<div class="container">
+<!--
+  <div class="page-header">
+    <h1>Monitoramento da C.I.A<small></small></h1>
+  </div>
+-->
+<!-- MENU DE TODAS AS LAMPADAS AP´OS O BOT~AO DE ILUMINAÇ~AO SER PRESSIONADO-->
+  <div id="myModal_luz" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Controle da Iluminaç&atilde;o</h4>
+        </div>
+        <div class="modal-body">
+          <article class="campo_lampada">
+		    <figure class="lampada1">
+		      	<img id="lampBanheiro" onclick="acenderLampBanheiro()" src="../img/leddesligada.png">
+		      	  <figcaption>
+		      		<button id="lmpBanheiro" class="btn btn-lg btn-danger">
+		      			Desligada
+		      		</button>
+		      	  </figcaption>
+		    </figure>
+          </article>
+
+          <article class="campo_lampada">
+        <figure class="lampada1">
+            <img id="lampCozinha" onclick="acenderLampCozinha()" src="../img/leddesligada.png">
+              <figcaption>
+              <button id="lmpCozinha" class="btn btn-lg btn-danger">
+                Desligada
+              </button>
+              </figcaption>
+        </figure>
+          </article>
+
+           <article class="campo_lampada">
+        <figure class="lampada1">
+            <img id="lampQuarto" onclick="acenderLampQuarto()" src="../img/leddesligada.png" disabled>
+              <figcaption>
+              <button id="lmpQuarto" class="btn btn-lg btn-danger">
+                Desligada
+              </button>
+              </figcaption>
+        </figure>
+          </article>
+
+          <article class="campo_lampada">
+		    <figure class="lampada1">
+		      	<img id="lamp1Sala" onclick="acenderLampSala1()" src="../img/leddesligada.png">
+		      	  <figcaption>
+		      		<button id="lmp1sala" class="btn btn-lg btn-danger">
+		      			Desligada
+		      		</button>
+		      	  </figcaption>
+		    </figure>
+          </article>
+
+          <article class="campo_lampada">
+		    <figure class="lampada1">
+		      	<img id="lamp2Sala" onclick="acenderLampSala2()" src="../img/ledligada.png">
+		      	  <figcaption>
+		      		<button id="lmp2sala" class="btn btn-lg btn-success">
+		      			Ligada
+		      		</button>
+		      	  </figcaption>
+		    </figure>
+          </article>
+
+          <article class="campo_lampada">
+        <figure class="lampada1">
+            <img id="lampTodas" onclick="acenderTodas()" src="../img/ledligada.png">
+              <figcaption>
+              <button id="lmpTodas" class="btn btn-lg btn-success">
+                Ligadas
+              </button>
+              </figcaption>
+        </figure>
+          </article>
+
+          <hr>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+<!--  -->
+  <div id="myModal_tv" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Modal Heading</h4>
+        </div>
+        <div class="modal-body">
+          <hr>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">X</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="panel panel-primary">
+     <div class="panel-heading">
+       <h3 class="panel-title">Painel Central</h3>
+     </div>
+      <div class="panel-body">
+        <img src="/home/brunogenny/Dropbox/Projeto CIA/Pagina Web/PWF2/img/lightligada.png" class="img-thumbnail" data-toggle="modal" data-target="#myModal_luz" carregar();>
+        <img src="/home/brunogenny/Dropbox/Projeto CIA/Pagina Web/PWF2/img/tvligada.png" class="img-thumbnail" data-toggle="modal" data-target="#myModal_tv">
+        <img src="/home/brunogenny/Dropbox/Projeto CIA/Pagina Web/PWF2/img/temperatura.png" class="img-thumbnail" data-toggle="modal" data-target="#myModaltemp">
+        <img src="/home/brunogenny/Dropbox/Projeto CIA/Pagina Web/PWF2/img/umidade.png" class="img-thumbnail" data-toggle="modal" data-target="#myModalumidade">
+        <img src="/home/brunogenny/Dropbox/Projeto CIA/Pagina Web/PWF2/img/cortina.png" class="img-thumbnail" data-toggle="modal" data-target="#myModalcortina">
+        <img src="/home/brunogenny/Dropbox/Projeto CIA/Pagina Web/PWF2/img/relatorio.png" class="img-thumbnail" data-toggle="modal" data-target="#myModalrelatorio">
+      </div>
+</div>
+
+</body>
+</html>
