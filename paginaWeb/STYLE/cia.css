@@ -1,0 +1,83 @@
+/*MENU DA PAGINA*/
+.menu-top{
+	background: -webkit-linear-gradient(#0006D2, #0050C5); 
+}
+/*NOME DO PROJETO*/
+.titulo-cia{
+	float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    color: white;
+}
+/*CORPO DA PAGINA*/
+body{
+	background:-webkit-linear-gradient( #BDD7E6,#C2D1E0);
+}
+/*PAINEL DAS FUNÇOES (LAMPDA,CORTINA,TEMPERATURA....)*/
+.panel-primary{
+	width: 60%;
+    position: relative;
+    left: 18%;
+}
+/*PAINEL DAS FUNÇOES LAMPADAS*/
+.img-thumbnail{
+	position: relative;
+    left: 6.4%;
+    background: #C3D4F3;
+    margin: 1em;
+    width: 25%;
+    padding: 1.5%;
+}
+.campo_lampada{
+	position: relative;
+    background: #616C8C;
+    margin: 1%;
+    padding: 0;
+    width: 31%;
+    left: 0.5%;
+    float: left;
+}
+.campo_lampada img{
+    width: 51.2%;
+    position: relative;
+    left: 21%;
+    padding: 0;
+    margin: 4%;
+}
+.btn-lg{
+    width: 100%;
+    margin: 0;
+    border-radius: 0em;
+    padding: 7%;
+    font-size: inherit;
+}
+.modal-content{
+	width: auto;
+}
+.modal-footer {
+    padding: 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+    width: 100%;
+    position: relative;
+    left: 0em;
+    display: inline-block;
+}
+/*MENU DOS ICONES NO MENU PRINCIPAL*/
+.navbar-nav{
+	background: white;
+    height: 3em;
+    position: relative;
+    top: 7pt;
+    border-radius: 5em;
+    float: right;
+    right: 2%;
+}
+.nav>li{
+	position: relative;
+    display: block;
+    top: -0.5em;
+}
+/**************************************/
