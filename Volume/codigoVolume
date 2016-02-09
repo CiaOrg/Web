@@ -1,0 +1,38 @@
+<!DOCTYPE html >
+<html>
+<body>
+<h3>Smart Home Automated - Casa Inteligente Automatizada - C.I.A</h3>
+
+<button onclick="diminuir()">-</button><input onclick="myFunction()" type="range" id="myRange" value="0"><button onclick="aumentar()">+</button>
+
+<p id="resultado"></p>
+
+<script>
+var x = new Number;
+
+function aumentar(){
+if(x >= 100)
+alert("Valor Maximo atingido");
+else{
+++x;
+document.getElementById("myRange").value = x;
+document.getElementById("resultado").innerHTML = x;
+  }
+}
+function diminuir(){
+if(x <= 0){
+alert("Valor Minimo atingido");
+}
+else{
+--x;
+document.getElementById("myRange").value = x;
+document.getElementById("resultado").innerHTML = x;
+}
+}
+function myFunction() {
+x = document.getElementById("myRange").value;
+   document.getElementById("resultado").innerHTML = x;
+}
+</script>
+</body>
+</html>
